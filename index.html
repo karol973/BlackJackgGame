@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>BlackJack</title>
+  </head>
+  <body>
+   
+    <nav>
+      <p class="welcome">Witaj w grze BlackJack!</p>
+      <img src="logo.png" alt="Logo" class="logo" />
+      <form class="login">
+        <input
+          type="text"
+          placeholder="login"
+          class="login__input login__input--user"
+        />
+        <input
+          type="password"
+          placeholder="hasło"
+          maxlength="4"
+          class="login__input login__input--pin"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form> 
+    </nav>
+
+    <main class="app">
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Gracz</h2>
+        
+        <div class="current">
+          <p class="current-label">PUNKTY</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+        <p class="score" id="score--0">Powodzenia</p>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">KASYNO</h2>
+        
+        <div class="current">
+          <p class="current-label">PUNKTY</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+        <p class="score" id="score--1">🎰</p>
+      </section>
+
+      <img src="karta-14.png" alt="Playing card" class="card" />
+      
+      <button class="btn btn--new">🎰 Nowa gra</button>
+      <button class="btn btn--roll">🃏 Dobierz kartę</button>
+      <button class="btn btn--hold">🙅‍♂️ Nie dobieraj</button>
+      
+      
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--wygrana"></div>
+          
+          <div class="movements__value"></div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--przegrana">
+            
+          </div>
+          
+          <div class="movements__value"></div>
+        </div>
+      </div>     
+      
+      <div class="balance">
+        📀 ŻETONY:  <p class="balance__value">100</p>
+      </div>
+  
+      <div class="operation operation--loan">
+        <h2>KUP ŻETONY 💳</h2>
+        <h3>(możesz kupić tylko pełne liczby dziesiętne)</h3>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">ILOŚĆ</label>
+        </form>
+      </div>     
+      
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
